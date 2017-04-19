@@ -1,0 +1,21 @@
+﻿{
+  "bindings": [
+    {
+      "type": "bot",
+      "name": "$return",
+      "direction": "out",
+      "botId": "GiveAwayBotFunction"
+    },
+    {
+      "type": "httpTrigger",
+      "name": "req",
+      "authLevel": "function",
+      "methods": [
+        "get",
+        "options"
+      ],
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}

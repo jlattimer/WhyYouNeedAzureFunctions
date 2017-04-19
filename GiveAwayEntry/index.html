@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Why You Really Need Azure Functions: Give Away Entry</title>
+    <link href="https://unpkg.com/botframework-webchat/botchat.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="bot"></div>
+    <script src="https://unpkg.com/botframework-webchat/botchat.js"></script>
+<script>
+    var userId = makeid();
+    var user = {
+        id: userId,
+        name: "You"
+    };
+    BotChat.App({
+        directLine: { secret: 'jLJpKKpKPxQ.cwA.wRE.HSLgCHUXXhCv_15DITK6CUPXhskVaGrGSvJBaKuZV1c' },
+        user: user,
+        bot: { id: 'GiveAwayBot' },
+        resize: 'detect'
+    }, document.getElementById("bot"));
+
+    function makeid() {
+        var id = "";
+        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        for (var i = 0; i < 11; i++)
+            id += possible.charAt(Math.floor(Math.random() * possible.length));
+
+        return id;
+    }
+</script>
+</body>
+</html>
